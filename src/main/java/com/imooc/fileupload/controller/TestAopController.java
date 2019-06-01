@@ -21,7 +21,7 @@ public class TestAopController {
    //使用map接受  前段提交的数据   注意 @requestBody  接受  json格式的数据
     //                               @requestParam 接受  标准表单提交格式
     //不加以上两个注解  获取不到数据
-    @PostMapping("/demo")
+    @GetMapping("/demo")
     public <T> String getParamByMap(@RequestBody Map<String,T> map){
         map.forEach((key,value) ->{
             System.out.println(key);
